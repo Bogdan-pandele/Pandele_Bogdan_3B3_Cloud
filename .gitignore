@@ -1,0 +1,6 @@
+**/target/
+
+**/database.json
+
+.vscode/
+.idea/

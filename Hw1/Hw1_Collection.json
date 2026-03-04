@@ -1,0 +1,279 @@
+{
+  "info": {
+    "_postman_id": "ef0ae3fb-4293-4256-a5c9-591a18f9ee4a",
+    "name": "Hw 1 Collection",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "49350090",
+    "_collection_link": "https://go.postman.co/collection/49350090-ef0ae3fb-4293-4256-a5c9-591a18f9ee4a?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Get Students",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "Get student by Id",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8080/students/96d0cfc9-2715-472c-af18-34ab6df66cda",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8080",
+          "path": [
+            "students",
+            "96d0cfc9-2715-472c-af18-34ab6df66cda"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get student by inexistent Id",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "Post student",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"id\": \"fa4ced6b-7588-488d-9b28-a9150b831ff6\",\n    \"name\": \"Pandele Bogdan\",\n    \"date_of_birth\": \"2004-08-16\",\n    \"gender\": \"Male\",\n    \"enrolement_date\": \"2023-09-01\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8080/students",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8080",
+          "path": [
+            "students"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Post student grade",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"class_id\": \"fcad0785-4ef7-484a-859b-ea0943ee87e8\",\n    \"score\": 7\n}"
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8080/students/f663f217-3172-4e0e-9cbc-0c665f2302ae/grades",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8080",
+          "path": [
+            "students",
+            "f663f217-3172-4e0e-9cbc-0c665f2302ae",
+            "grades"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Put student",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"id\": \"f663f217-3172-4e0e-9cbc-0c665f2302ae\",\n    \"name\": \"Vasilescu\",\n    \"gender\": \"Male\",\n    \"date_of_birth\": \"2005-05-03\",\n    \"enrolement_date\": \"2024-09-01\" \n}"
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8080/students/fa4ced6b-7588-488d-9b28-a9150b831ff6",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8080",
+          "path": [
+            "students",
+            "fa4ced6b-7588-488d-9b28-a9150b831ff6"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Put student grade",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"score\": 7\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8080/students/d0015ac4-36eb-411a-8791-b4d37818ff93/grades/fcad0785-4ef7-484a-859b-ea0943ee87e8",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8080",
+          "path": [
+            "students",
+            "d0015ac4-36eb-411a-8791-b4d37818ff93",
+            "grades",
+            "fcad0785-4ef7-484a-859b-ea0943ee87e8"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Patch student",
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"name\": \"Vasile\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8080/students/f663f217-3172-4e0e-9cbc-0c665f2302ae",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8080",
+          "path": [
+            "students",
+            "f663f217-3172-4e0e-9cbc-0c665f2302ae"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Patch class",
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"teacher_id\": \"6c369f65-0d9b-41ee-a4b9-e58cfba31105\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8080/classes/fcad0785-4ef7-484a-859b-ea0943ee87e8",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8080",
+          "path": [
+            "classes",
+            "fcad0785-4ef7-484a-859b-ea0943ee87e8"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete all students - Not allowed",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8080/students",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8080",
+          "path": [
+            "students"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "New Request",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8080/students/7e98e00a-c2a7-4e30-9379-ec1160244f9e",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8080",
+          "path": [
+            "students",
+            "7e98e00a-c2a7-4e30-9379-ec1160244f9e"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
