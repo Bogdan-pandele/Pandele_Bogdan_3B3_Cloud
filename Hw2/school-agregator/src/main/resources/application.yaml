@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: "school-agregator"
+server:
+  port: 3000
+
+weatherstack:
+  api-key: "${WEATHERSTACK_API_KEY}"
+  base-url: "http://api.weatherstack.com/current"
